@@ -25,7 +25,7 @@ const Header = () => {
                 {
                     // creating the an image url from the imageUrl File Object
                 }
-                <img src={URL.createObjectURL(imageUrl)}/>
+                <img src={URL.createObjectURL(imageUrl)} alt=""/>
             </ImageHolder>
             <Content clrs={themeClrs}>
                 <h2>{firstName} {secondName}</h2>
