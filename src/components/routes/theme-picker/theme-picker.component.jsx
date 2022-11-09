@@ -29,9 +29,7 @@ const themes = [
 
 // creation fo the ThemePicker component that will let the user pick wich colors he wants in his resume
 const ThemePicker = () => {
-    // destructuring the setThemeClrs , the isReadyToPick properties
-    const { setThemeClrs,isReadyToPick } = useContext(ThemeContext)
-    // destructuring the setIsReadyToDisplay property from the UserContext
+    // creating the navigate function using the useNavigate hook
     const navigate = useNavigate()
     // creating the colorPicker function that gets the id as an argument and it sets the themeClrs to the related theme to that id, and then it navigate to the cv page after setting isReadyToDisplay to true
     const colorPicker = (id) => {
@@ -39,8 +37,11 @@ const ThemePicker = () => {
         setIsReadyToDisplay(true)
         navigate("/cv")
     }
+    // destructuring the setIsReadyToDisplay property from the UserContext
     const { setIsReadyToDisplay } = useContext(UserContext)
-    // creating the navigate function using the useNavigate hook
+    // destructuring the setThemeClrs , the isReadyToPick properties
+    const { setThemeClrs,isReadyToPick } = useContext(ThemeContext)
+    //if isReadyToPick is false , the ThemePicker page shouldn't be shown so we navigate the user to the form page
     if(!isReadyToPick){
         return <Navigate to="/"/>
     }

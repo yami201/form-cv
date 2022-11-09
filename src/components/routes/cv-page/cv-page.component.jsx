@@ -12,11 +12,11 @@ import SideBar from "../../sidebar/sidebar.component";
 import MainContent from "../../main-content/main-content.component";
 //  Creation of the CvPage component wich will contain the cv route(page)
 const CvPage = () => {
-    // destructuring the isReadyToDisplay from the UserContext 
-    const { themeClrs } = useContext(ThemeContext)
-    // if isReadyToDisplay is false , the Resume page shouldn't be shown so we navigate the user to the picker page
-    const { isReadyToDisplay } = useContext(UserContext)
     // destructuring the themeClrs from the ThemeContext
+    const { themeClrs } = useContext(ThemeContext)
+    // destructuring the isReadyToDisplay from the UserContext 
+    const { isReadyToDisplay } = useContext(UserContext)
+    //if isReadyToDisplay is false , the Resume page shouldn't be shown so we navigate the user to the picker page
     if(!isReadyToDisplay) {
         return <Navigate  to="/picker"/>
     }
