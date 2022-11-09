@@ -50,17 +50,17 @@ const ThemePicker = () => {
             <ThemeCard 
                 frameClr={themes[0].mainClr} 
                 onClick={() => colorPicker(0)}>
-                <img src={FirstTheme}/>
+                <img src={FirstTheme} alt=""/>
             </ThemeCard>
             <ThemeCard 
                 frameClr={themes[1].mainClr}
                 onClick={() => colorPicker(1)}>
-                <img src={SecondTheme}/>
+                <img src={SecondTheme} alt=""/>
             </ThemeCard>
             <ThemeCard 
                 frameClr={themes[2].mainClr} 
                 onClick={() => colorPicker(2)}>
-                <img src={ThirdTheme}/>
+                <img src={ThirdTheme} alt=""/>
             </ThemeCard>
         </CardsWrapper>
      );

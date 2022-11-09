@@ -96,6 +96,7 @@ const FormField = () => {
             // same thing goes for the hobbies field
             case "hobbies":
                 hobbies[id] = {content:value,visibility:true}
+                break;
             // since each element of the Skills array has two different fields , if the name is SkillName then we will change the skillName property of that array's element
             case "skillName":
                 skills[id] = {
